@@ -26,7 +26,7 @@
 ```
 oc adm policy add-scc-to-user anyuid -z passoire
 ```
-
+ 
 - 4 - Créer le deploiement manifests/deployment-passoire.yaml dans le projet integrations-prod
 
 - 5 - Exécuter un terminal (console ou rsh) vers le pod passoire-*
