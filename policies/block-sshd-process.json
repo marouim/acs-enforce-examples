@@ -1,0 +1,57 @@
+{
+    "policies": [
+        {
+            "id": "e3c47a08-2ca8-4abc-a9ae-1da33a3561d0",
+            "name": "integrations-prod-no-sshd",
+            "description": "",
+            "rationale": "",
+            "remediation": "",
+            "disabled": false,
+            "categories": [
+                "Anomalous Activity"
+            ],
+            "fields": null,
+            "lifecycleStages": [
+                "RUNTIME"
+            ],
+            "whitelists": [],
+            "exclusions": [],
+            "scope": [
+                {
+                    "cluster": "",
+                    "namespace": "integrations-prod",
+                    "label": null
+                }
+            ],
+            "severity": "HIGH_SEVERITY",
+            "enforcementActions": [
+                "KILL_POD_ENFORCEMENT",
+                "FAIL_KUBE_REQUEST_ENFORCEMENT"
+            ],
+            "notifiers": [],
+            "lastUpdated": "2021-08-10T12:26:14.351062360Z",
+            "SORTName": "",
+            "SORTLifecycleStage": "",
+            "SORTEnforcement": false,
+            "policyVersion": "1.1",
+            "policySections": [
+                {
+                    "sectionName": "Policy Section 1",
+                    "policyGroups": [
+                        {
+                            "fieldName": "Process Name",
+                            "booleanOperator": "OR",
+                            "negate": false,
+                            "values": [
+                                {
+                                    "value": "/usr/sbin/sshd"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "eventSource": "DEPLOYMENT_EVENT"
+        }
+    ]
+}

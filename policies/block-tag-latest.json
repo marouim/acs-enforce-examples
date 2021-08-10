@@ -1,0 +1,57 @@
+{
+    "policies": [
+        {
+            "id": "06fc94ac-794c-4d06-bd87-8b156743cfc1",
+            "name": "integrations-prod-latest",
+            "description": "",
+            "rationale": "",
+            "remediation": "",
+            "disabled": false,
+            "categories": [
+                "DevOps Best Practices"
+            ],
+            "fields": null,
+            "lifecycleStages": [
+                "DEPLOY"
+            ],
+            "whitelists": [],
+            "exclusions": [],
+            "scope": [
+                {
+                    "cluster": "",
+                    "namespace": "integrations-prod",
+                    "label": null
+                }
+            ],
+            "severity": "HIGH_SEVERITY",
+            "enforcementActions": [
+                "SCALE_TO_ZERO_ENFORCEMENT",
+                "UNSATISFIABLE_NODE_CONSTRAINT_ENFORCEMENT"
+            ],
+            "notifiers": [],
+            "lastUpdated": "2021-08-10T11:55:07.466392954Z",
+            "SORTName": "",
+            "SORTLifecycleStage": "",
+            "SORTEnforcement": false,
+            "policyVersion": "1.1",
+            "policySections": [
+                {
+                    "sectionName": "Policy Section 1",
+                    "policyGroups": [
+                        {
+                            "fieldName": "Image Tag",
+                            "booleanOperator": "OR",
+                            "negate": false,
+                            "values": [
+                                {
+                                    "value": "latest"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "eventSource": "NOT_APPLICABLE"
+        }
+    ]
+}
