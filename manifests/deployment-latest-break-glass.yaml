@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    admission.stackrox.io/break-glass: "ticket-1234"
+  name: deploy-latest
+spec:
+  selector:
+    matchLabels:
+      app: httpd
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: httpd
+    spec:
+      containers:
+        - name: httpd
+          image: registry.redhat.io/rhscl/httpd-24-rhel7:latest
+          ports:
+            - containerPort: 8080
